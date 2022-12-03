@@ -614,6 +614,7 @@ header nav {
 }
 #testimonials .carousel-box .right {
   padding-top: 25px;
+  margin-left: 140px;
 }
 #testimonials .carousel-box .right .info {
   font-family: "Roboto";
@@ -735,6 +736,12 @@ header nav {
   #FAQ .faq-manager .left,
 #FAQ .faq-manager .right {
     width: 80%;
+  }
+  #testimonials .carousel-box .right {
+    margin-left: 20px;
+  }
+  .container {
+    padding: 0 30px;
   }
   .edu-work_manager {
     flex-wrap: wrap;
@@ -872,11 +879,18 @@ header nav {
     margin-left: auto;
     margin-right: auto;
   }
-  #testimonials .prev, #testimonials .next {
+  #testimonials .prev,
+#testimonials .next {
     bottom: -100px;
   }
 }
 @media screen and (max-width: 567px) {
+  .container {
+    padding: 0 20px;
+  }
+  header .topnav #myLinks {
+    margin-left: -500px;
+  }
   #FAQ h3 {
     font-size: 30px;
     margin-bottom: 70px;
@@ -913,13 +927,10 @@ header nav {
   #services .sec-desc {
     font-size: 30px;
   }
-  .topnav a {
-    width: 30px;
-  }
 }
 @media screen and (max-width: 376px) {
   .container {
-    padding: 0 30px;
+    padding: 0 10px;
   }
   #product-designer #photo-change .indicators img {
     width: 8.5em;
