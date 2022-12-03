@@ -1,0 +1,927 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500&family=Roboto:wght@400;700&family=Schoolbell&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-color: #000000;
+  --white-color: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.loader_bg {
+  position: fixed;
+  z-index: 999999;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  border: 1em solid;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: loader 2s linear infinite;
+          animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader::before {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    border-color: rgb(225, 255, 0);
+  }
+  50% {
+    opacity: 1;
+    border-color: rgb(255, 113, 47);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    border-color: rgb(255, 170, 0);
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    border-color: rgb(225, 255, 0);
+  }
+  50% {
+    opacity: 1;
+    border-color: rgb(255, 113, 47);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    border-color: rgb(255, 170, 0);
+  }
+}
+.backtop {
+  right: 50px;
+  bottom: 50px;
+  position: fixed;
+  display: inline-block;
+  background-color: #FF8A56;
+  border-radius: 60%;
+  padding: 15px 17px;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+}
+.backtop .fa {
+  color: white;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+header .topnav {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+header .topnav #myLinks {
+  display: flex;
+}
+header .topnav #myLinks a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--black-color);
+  margin-left: 46px;
+}
+header .topnav #myLinks a.active, header .topnav #myLinks a:hover {
+  transition: 0.3s;
+  color: #FF8A56;
+}
+header nav {
+  transition: 0.3s;
+}
+
+.topnav a.icon {
+  background: black;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#hero {
+  margin-top: 56px;
+}
+#hero .hero-manager {
+  display: flex;
+}
+#hero .hero-manager .left {
+  flex: 50%;
+  padding-top: 50px;
+}
+#hero .hero-manager .left h2:first-child {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 82px;
+  letter-spacing: 2px;
+  color: #FF8A56;
+}
+#hero .hero-manager .left h2:nth-child(2) {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 82px;
+  letter-spacing: 2px;
+  color: #000000;
+}
+#hero .hero-manager .left .about-me {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  color: #666666;
+  margin-top: 34px;
+}
+#hero .hero-manager .left button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  padding: 13px 30px;
+  margin-top: 38px;
+}
+#hero .hero-manager .left button:hover {
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.5);
+  background-color: #FF8A56;
+  border: 2px solid #FF8A56;
+  transition: 0.3s;
+}
+#hero .hero-manager .left .cv-download {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  margin-left: 40px;
+}
+#hero .hero-manager .left .cv-download:hover {
+  color: #FF5E69;
+  transition: 0.3s;
+}
+#hero .hero-manager .left img {
+  margin-left: 15px;
+  width: 15px;
+}
+#hero .right {
+  flex: 50%;
+  display: flex;
+}
+#hero .right img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#services {
+  margin-top: 70px;
+}
+#services h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FF5E69;
+}
+#services .sec-desc {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 59px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--black-color);
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+#services .my-services {
+  display: flex;
+  justify-content: space-between;
+}
+#services .my-services .box img {
+  margin-left: 14px;
+}
+#services .my-services .box h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--black-color);
+  margin-top: 40px;
+}
+#services .my-services .box .box-desc {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #666666;
+  margin-top: 25px;
+}
+#services .my-services .box ul {
+  margin-top: 39px;
+  margin-left: 20px;
+}
+#services .my-services .box ul li {
+  margin-top: 10px;
+  list-style-type: square;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--black-color);
+}
+
+#projects {
+  margin-top: 200px;
+}
+#projects .slide-content {
+  width: 490px;
+}
+#projects h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #B16CEA;
+}
+#projects h3:nth-child(2) {
+  margin-top: 20px;
+}
+#projects h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 59px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#projects .slide-container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  margin-top: 70px;
+  gap: 25px;
+}
+#projects .slide-container img {
+  width: 486px;
+  height: 305px;
+}
+#projects .slide-container .card-image .card-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#projects .slide-container .card-content {
+  padding-left: 32px;
+}
+#projects .slide-container .card-content h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #3C46FF;
+  margin-top: 33px;
+}
+#projects .slide-container .card-content p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  margin-top: 17px;
+  color: #000000;
+}
+#projects .slide-container .card-content a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#product-designer {
+  margin-top: 170px;
+  margin-bottom: 200px;
+}
+#product-designer .pd-manager {
+  display: flex;
+  justify-content: space-between;
+}
+#product-designer .pd-manager h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FF5E69;
+}
+#product-designer .pd-manager h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 59px;
+  letter-spacing: 1px;
+  color: var(--black-color);
+  margin-top: 15px;
+}
+#product-designer .pd-manager p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 40px;
+  color: #666666;
+}
+#product-designer #photo-change {
+  margin-top: 40px;
+}
+#product-designer #photo-change #main-img {
+  text-align: center;
+  padding-top: 20px;
+}
+#product-designer #photo-change #main-img img {
+  width: 100%;
+  height: 600px;
+}
+#product-designer #photo-change .indicators {
+  display: flex;
+  margin-top: 21px;
+  justify-content: space-between;
+}
+#product-designer #photo-change .indicators img {
+  width: 200px;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex: 16, 6667%;
+}
+
+#edu-work {
+  margin-top: 50px;
+}
+#edu-work .edu-work_manager {
+  gap: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#edu-work .edu-work_manager .left {
+  flex: 48%;
+}
+#edu-work .edu-work_manager h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  margin-bottom: 80px;
+}
+#edu-work .edu-work_manager .box {
+  margin-top: 32px;
+  border-bottom: 2px solid #E5E5E5;
+  position: relative;
+  transition: 0.1s;
+}
+#edu-work .edu-work_manager .box:hover {
+  transition: 0.5s ease-out;
+  border-bottom: 2px solid #FF8A56;
+  padding: 5px 10px 20px 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#edu-work .edu-work_manager .box .box-header {
+  display: flex;
+  justify-content: space-between;
+}
+#edu-work .edu-work_manager .box .box-header h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+}
+#edu-work .edu-work_manager .box .box-header img {
+  width: 20px;
+}
+#edu-work .edu-work_manager .box .desc {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+  display: inline-block;
+  margin-bottom: 39px;
+}
+#edu-work .edu-work_manager .box .date {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.6);
+  right: 100px;
+  margin-top: 10px;
+  display: inline-block;
+  position: absolute;
+}
+#edu-work .edu-work_manager .right {
+  flex: 48%;
+}
+#edu-work .edu-work_manager .right .img {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+#edu-work .edu-work_manager .right .box {
+  padding-left: 70px;
+}
+#edu-work .edu-work_manager .right .box:hover .img {
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+
+#testimonials {
+  margin-top: 142px;
+}
+#testimonials .left img {
+  height: 490px;
+}
+#testimonials .slideshow-container {
+  position: relative;
+  margin: auto;
+}
+#testimonials .mySlides {
+  display: none;
+}
+#testimonials .prev,
+#testimonials .next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: auto;
+  margin-top: -22px;
+  padding: 15px 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: black;
+}
+#testimonials .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+#testimonials .prev {
+  right: 70px;
+}
+#testimonials .prev:hover,
+#testimonials .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#testimonials .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#testimonials h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4353FF;
+}
+#testimonials h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 59px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  color: #000000;
+}
+#testimonials .carousel-box {
+  margin-top: 60px;
+  display: flex;
+}
+#testimonials .carousel-box .right {
+  padding-top: 25px;
+}
+#testimonials .carousel-box .right .info {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 47px;
+  color: #000000;
+  margin-top: 30px;
+}
+#testimonials .carousel-box .right .name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  margin-top: 110px;
+}
+#testimonials .carousel-box .right .job {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+#FAQ {
+  margin-top: 135px;
+  padding-top: 80px;
+  background-color: var(--black-color);
+  padding-bottom: 70px;
+}
+#FAQ .faq-manager {
+  display: flex;
+  gap: 50px;
+}
+#FAQ h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #FF8A56;
+  text-align: center;
+}
+#FAQ h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 59px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 150px;
+}
+#FAQ .accordion {
+  background-color: var(--black-color);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  margin-top: 25px;
+  padding-bottom: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0.3px;
+  color: #FFFFFF;
+}
+#FAQ .active,
+#FAQ .accordion:hover {
+  color: #FF8A56;
+}
+#FAQ .accordion::after {
+  content: "+";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+#FAQ .active:after {
+  content: "−";
+}
+#FAQ .panel {
+  padding: 0 10px;
+  background-color: black;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 17px;
+  transition: max-height 0.2s ease-out;
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+#FAQ .underline {
+  border-bottom: 2px solid rgba(229, 229, 229, 0.3);
+}
+
+@media screen and (max-width: 1320px) {
+  #product-designer #photo-change .indicators {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1250px) {
+  #FAQ .faq-manager {
+    flex-wrap: wrap !important;
+    justify-content: center;
+  }
+  #FAQ .faq-manager .left,
+#FAQ .faq-manager .right {
+    width: 80%;
+  }
+  .edu-work_manager {
+    flex-wrap: wrap;
+  }
+  #hero .hero-manager {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  #hero .hero-manager .right img {
+    width: 70%;
+  }
+  #hero .hero-manager .left {
+    text-align: center;
+  }
+  #services {
+    margin-top: 200px;
+  }
+  .carousel-box {
+    flex-wrap: wrap;
+  }
+  .carousel-box .left {
+    position: relative;
+    width: 100%;
+  }
+  .carousel-box .left img {
+    display: block;
+    width: 100%;
+  }
+  #testimonials .carousel-box .right .name {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .topnav {
+    overflow: hidden;
+    position: relative;
+  }
+  .topnav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    color: white;
+  }
+  header .topnav #myLinks {
+    display: none;
+    margin-top: 80px;
+  }
+  header .topnav #myLinks a {
+    text-align: center;
+  }
+  header .topnav #myLinks a:hover {
+    background-color: black;
+    border-radius: 20px;
+  }
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: none;
+    display: block;
+    position: absolute;
+    color: black;
+    right: 0px;
+    top: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #product-designer .pd-manager {
+    flex-direction: column;
+    text-align: center;
+  }
+  #services .my-services {
+    flex-wrap: wrap;
+  }
+  #services .my-services .box {
+    flex: 50%;
+    text-align: center;
+  }
+  #services .my-services ul li {
+    list-style: none !important;
+    text-decoration: underline;
+  }
+  #services .my-services .box:nth-child(3) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  #product-designer #photo-change .indicators img {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #FAQ .faq-manager .left,
+#FAQ .faq-manager .right {
+    width: 100%;
+  }
+  #edu-work .edu-work_manager .box .date {
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
+  }
+  #edu-work .edu-work_manager .left .box .date {
+    left: 0px;
+  }
+  #product-designer #photo-change .indicators img {
+    width: 270px;
+  }
+  #product-designer #photo-change #main-img img {
+    height: 400px;
+  }
+  #hero .hero-manager .left h2:first-child,
+#hero .hero-manager .left h2:nth-child(2) {
+    font-size: 50px;
+  }
+  #hero .hero-manager .right img {
+    width: 100%;
+  }
+  #services .my-services .box {
+    flex: 100%;
+  }
+  #services .my-services .box:nth-child(2), #services .my-services .box:nth-child(3) {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 660px) {
+  #product-designer #photo-change .indicators img {
+    width: 7.5em;
+  }
+  #testimonials h3 {
+    font-size: 30px;
+  }
+  #testimonials .carousel-box .right .info {
+    font-size: 20px;
+  }
+  #testimonials .carousel-box .right {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #testimonials .prev, #testimonials .next {
+    bottom: -100px;
+  }
+}
+@media screen and (max-width: 567px) {
+  #FAQ h3 {
+    font-size: 30px;
+    margin-bottom: 70px;
+  }
+  #FAQ .accordion {
+    font-size: 20px;
+  }
+  #hero .hero-manager .left h2:first-child,
+#hero .hero-manager .left h2:nth-child(2) {
+    font-size: 30px;
+    line-height: 60px;
+  }
+  #edu-work .edu-work_manager .right .box .date {
+    display: none;
+  }
+  #edu-work .edu-work_manager h2 {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+  .container {
+    max-width: 540px;
+  }
+  #hero .hero-manager .left button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  #hero .hero-manager .left .cv-download {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #services .sec-desc {
+    font-size: 30px;
+  }
+  .topnav a {
+    width: 30px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .container {
+    padding: 0 30px;
+  }
+  #product-designer #photo-change .indicators img {
+    width: 8.5em;
+  }
+}/*# sourceMappingURL=main.css.map */

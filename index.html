@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- For fontawesome icons -->
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- <div class="loader_bg">
+      <div class="loader"></div>
+    </div> -->
+
+    <div class="backtop">
+      <a href="#">
+        <i class="fa fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <header>
+      <nav>
+        <div class="container">
+          <div class="topnav">
+            <a href="#home" class="active"
+              ><img src="./images/logo.png" alt="site-logo"
+            /></a>
+            <div id="myLinks">
+              <a href="#news">Home</a>
+              <a href="#contact">Services</a>
+              <a href="#about">Projects</a>
+              <a href="#about">Experience</a>
+              <a href="#about">About</a>
+              <a href="#about">Testmonial</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="container">
+          <div class="hero-manager">
+            <div class="left">
+              <h2>I design products</h2>
+              <h2>
+                that delight and <br />
+                inspire people.
+              </h2>
+              <p class="about-me">
+                Hi! I’m Jake, a product designer based in Berlin. I create
+                <br />
+                user-friendly interfaces for fast-growing startups.
+              </p>
+              <button>Book a call</button>
+              <a href="#" class="cv-download">Download CV</a>
+              <a href="#">
+                <img src="./images/right-arrow.svg" alt="next" />
+              </a>
+            </div>
+            <div class="right">
+              <img src="./images/my-portret.png" alt="my-portret" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <h1>Services</h1>
+          <h2 class="sec-desc">
+            Design that solves problems,<br />
+            one product at a time.
+          </h2>
+          <div class="my-services">
+            <div class="box">
+              <img src="./images/services-img1.png" alt="" />
+              <h3>What I can do for you</h3>
+              <p class="box-desc">
+                Faster, better products that your users <br />
+                love. Here's all the services I provide:
+              </p>
+              <ul>
+                <li style="margin-top: 70px">Design Strategy</li>
+                <li>Web and Mobile App Design</li>
+                <li>Front-end Development</li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <img src="./images/services-img2.png" alt="" />
+              <h3>What I can do for you</h3>
+              <p class="box-desc">
+                Every designer needs the right <br />
+                tools to do the perfect job. <br />
+                Thankfully, I'm multilingual.
+              </p>
+              <ul>
+                <li>Sketch</li>
+                <li>Webflow</li>
+                <li>Figma</li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <img src="./images/services-img3.png" alt="" />
+              <h3>What I can do for you</h3>
+              <p class="box-desc">
+                I design products that are more than <br />
+                pretty. I make them shippable and <br />
+                usable.
+              </p>
+              <ul>
+                <li>Clean and functional</li>
+                <li>Device and user friendly</li>
+                <li>Efficient and maintainable</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2>PROJECTS</h2>
+          <h3>I bring results.</h3>
+          <h3>My clients are proof.</h3>
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+                <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                    <img
+                      src="./images/project-img1.png"
+                      alt=""
+                      class="card-img"
+                    />
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4>Branding</h4>
+                  <p>Soulful Rebrand</p>
+                  <a href="#">View Project</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+                <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                    <img
+                      src="./images/project-img2.png"
+                      alt=""
+                      class="card-img"
+                    />
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4>Branding</h4>
+                  <p>Soulful Rebrand</p>
+                  <a href="#">View Project</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+                <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                    <img
+                      src="./images/project-img3.png"
+                      alt=""
+                      class="card-img"
+                    />
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4>Branding</h4>
+                  <p>Soulful Rebrand</p>
+                  <a href="#">View Project</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+                <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                    <img
+                      src="./images/project-img3.png"
+                      alt=""
+                      class="card-img"
+                    />
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4>Branding</h4>
+                  <p>Soulful Rebrand</p>
+                  <a href="#">View Project</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+                <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                    <img
+                      src="./images/project-img1.png"
+                      alt=""
+                      class="card-img"
+                    />
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h4>Branding</h4>
+                  <p>Soulful Rebrand</p>
+                  <a href="#">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="product-designer">
+        <div class="container">
+          <div class="pd-manager">
+            <div class="left">
+              <h2>Product Designer</h2>
+              <h3>That's me!</h3>
+            </div>
+            <div class="right">
+              <p>
+                Over the past 12 years, I've worked with a diverse range of
+                <br />
+                clients, from startups to Fortune 500 companies. I love crafting
+                <br />
+                interfaces that delight users and help businesses grow.
+              </p>
+            </div>
+          </div>
+          <div id="photo-change">
+            <div id="main-img">
+              <img src="./images/pd-main-img.png" alt="" />
+            </div>
+            <div class="indicators text-center">
+              <a href=""><img src="./images/russia1.jpeg" alt="" /></a>
+              <a href="">
+                <img src="./images/russia-img2.jpeg" alt="" />
+              </a>
+              <a href="">
+                <img src="./images/russia-img3.jpeg" alt="" />
+              </a>
+              <a href="">
+                <img src="./images/russia-img4.jpeg" alt="" />
+              </a>
+              <a href="">
+                <img src="./images/russia-img5.jpeg" alt="" />
+              </a>
+              <a href="">
+                <img src="./images/russia-img6.jpeg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="edu-work">
+        <div class="container">
+          <div class="edu-work_manager">
+            <div class="left">
+              <h2>📚 Education</h2>
+
+              <div class="box">
+                <div class="box-header">
+                  <h3>Stanford University</h3>
+                  <img src="./images/up-right.svg" alt="" />
+                </div>
+                <p class="desc">MSc (Human Computer Interaction)</p>
+                <p class="date">• 2013-2015</p>
+              </div>
+
+              <div class="box">
+                <div class="box-header">
+                  <h3>MIT Summer School</h3>
+                  <img src="./images/up-right.svg" alt="" />
+                </div>
+                <p class="desc">UX Training Bootcamp</p>
+                <p class="date">• 2013-2014</p>
+              </div>
+
+              <div class="box">
+                <div class="box-header">
+                  <h3>California State University</h3>
+                  <img src="./images/up-right.svg" alt="" />
+                </div>
+                <p class="desc">BSc in Software Engineering</p>
+                <p class="date">• 2009-2012</p>
+              </div>
+            </div>
+            <div class="right">
+              <h2>💼 Work Experience</h2>
+              <div class="box">
+                <div class="box-header">
+                  <h3>SpaceFleet</h3>
+                  <img src="./images/up-right.svg" alt="" />
+                </div>
+                <p class="desc">Senior Product Designer</p>
+                <p class="date">• April 2019 - Current</p>
+                <img src="./images/work-img1.png" alt="" class="img" />
+              </div>
+              <div class="box">
+                <div class="box-header">
+                  <h3>MusicMash</h3>
+                  <img src="./images/up-right.svg" alt="" />
+                </div>
+                <p class="desc">Information Architect</p>
+                <p class="date">• April 2016 - May 2017</p>
+                <img src="./images/work-img2.png" alt="" class="img" />
+              </div>
+              <div class="box">
+                <div class="box-header">
+                  <h3>Kingdom</h3>
+                  <img src="./images/up-right.svg" alt="" />
+                </div>
+                <p class="desc">UI Designer</p>
+                <p class="date">• April 2016 - May 2017</p>
+                <img src="./images/work-img3.png" alt="" class="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <div class="container">
+          <h2>Testimonials</h2>
+          <h3>Word on the street</h3>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="carousel-box">
+                <div class="left">
+                  <img src="./images/testimonals-img.png" alt="portret" />
+                </div>
+                <div class="right">
+                  <img src="./images/carousel-img.png" alt="" />
+                  <p class="info">
+                    Jade helped us build a software so <br />
+                    intuitive that it didn't need a <br />
+                    walkthrough. He solved complex <br />
+                    problems with brilliant design.
+                  </p>
+                  <p class="name">John Frankin</p>
+                  <p class="job">Founder, Double Bunch</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="carousel-box">
+                <div class="left">
+                  <img src="images/portret1.webp" alt="portret" />
+                </div>
+                <div class="right">
+                  <img src="./images/carousel-img.png" alt="" />
+                  <p class="info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing. <br />
+                    Lorem ipsum dolor sit amet. <br />
+                    walkthrough. He solved complex <br />
+                    problems with brilliant design.
+                  </p>
+                  <p class="name">John Frankin</p>
+                  <p class="job">Founder, Double Bunch</p>
+                </div>
+              </div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="FAQ">
+        <div class="container">
+          <h2>FAQ</h2>
+          <h3>Frequently asked questions</h3>
+          <div class="faq-manager">
+            <div class="left">
+              <button class="accordion">
+                What type of projects do you take on?
+              </button>
+              <div class="panel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestiae nesciunt dolore voluptates, dolorum quod eos
+                repellat enim repellendus aliquid dolorem earum amet porro
+                quisquam molestias recusandae commodi mollitia quia. Iure
+                voluptates beatae minima. Veritatis inventore ea quos quis ut.
+              </div>
+              <div class="underline"></div>
+              <button class="accordion">What is your hourly rate?</button>
+              <div class="panel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestiae nesciunt dolore voluptates, dolorum quod eos
+                repellat enim repellendus aliquid dolorem earum amet porro
+                quisquam molestias recusandae commodi mollitia quia. Iure
+                voluptates beatae minima. Veritatis inventore ea quos quis ut.
+              </div>
+              <div class="underline"></div>
+              <button class="accordion">What time-zone do you work in?</button>
+              <div class="panel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestiae nesciunt dolore voluptates, dolorum quod eos
+                repellat enim repellendus aliquid dolorem earum amet porro
+                quisquam molestias recusandae commodi mollitia quia. Iure
+                voluptates beatae minima. Veritatis inventore ea quos quis ut.
+              </div>
+              <div class="underline"></div>
+              <button class="accordion">
+                What is the typical timeline for a project?
+              </button>
+              <div class="panel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestiae nesciunt dolore voluptates, dolorum quod eos
+                repellat enim repellendus aliquid dolorem earum amet porro
+                quisquam molestias recusandae commodi mollitia quia. Iure
+                voluptates beatae minima. Veritatis inventore ea quos quis ut.
+              </div>
+              <div class="underline"></div>
+            </div>
+            <div class="right">
+              <button class="accordion">
+                How do you charge for projects ?
+              </button>
+              <div class="panel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestiae nesciunt dolore voluptates, dolorum quod eos
+                repellat enim repellendus aliquid dolorem earum amet porro
+                quisquam molestias recusandae commodi mollitia quia. Iure
+                voluptates beatae minima. Veritatis inventore ea quos quis ut.
+              </div>
+              <div class="underline"></div>
+
+              <button class="accordion">
+                What does your design process look like?
+              </button>
+              <div class="panel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestiae nesciunt dolore voluptates, dolorum quod eos
+                repellat enim repellendus aliquid dolorem earum amet porro
+                quisquam molestias recusandae commodi mollitia quia. Iure
+                voluptates beatae minima. Veritatis inventore ea quos quis ut.
+              </div>
+              <div class="underline"></div>
+
+              <button class="accordion">
+                What metrics do you use to measure success?
+              </button>
+              <div class="panel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestiae nesciunt dolore voluptates, dolorum quod eos
+                repellat enim repellendus aliquid dolorem earum amet porro
+                quisquam molestias recusandae commodi mollitia quia. Iure
+                voluptates beatae minima. Veritatis inventore ea quos quis ut.
+              </div>
+              <div class="underline"></div>
+
+              <button class="accordion">
+                What if I need help after the project is complete?
+              </button>
+              <div class="panel">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestiae nesciunt dolore voluptates, dolorum quod eos
+                repellat enim repellendus aliquid dolorem earum amet porro
+                quisquam molestias recusandae commodi mollitia quia. Iure
+                voluptates beatae minima. Veritatis inventore ea quos quis ut.
+              </div>
+              <div class="underline"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      setTimeout(function () {
+        $(".loader_bg").fadeToggle();
+      }, 1500);
+    </script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="./js/node.js"></script>
+  </body>
+</html>
